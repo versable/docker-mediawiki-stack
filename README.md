@@ -16,7 +16,7 @@ git clone https://github.com/versable/docker-mediawiki-stack.git
 cd docker-mediawiki-stack
 git checkout REL1_28
 git submodule update --init --remote --merge
-sudo ./runfirst.sh && docker-compose up -d
+sudo ./runfirst.sh && sudo docker-compose up -d
 ```
 
 You're now running the world’s largest enterprise wiki platform.
