@@ -8,7 +8,7 @@ Master is my development (not mw dev). REL branches are inline with their respec
 
 Docker requires a 64-bit OS and version 3.10 or higher of the Linux kernel. To check: uname -r
 
-I recommend running the runfirst.bash. It does work for you with setting visual editor as well as a couple other things. Wiki is on port 80. phpmyadmin is on port 8080. root mysql pw is in the docker-compose.yml. Database host is supposed to be "mysql". It will be preset if you run runfirst.bash
+I recommend running the runfirst.sh. It does work for you with setting visual editor as well as a couple other things. Wiki is on port 80. phpmyadmin is on port 8080. root mysql pw is in the docker-compose.yml. Database host is supposed to be "mysql". It will be preset if you run runfirst.sh
 
 
 ```
@@ -16,8 +16,7 @@ git clone https://github.com/rlewkowicz/docker-mediawiki-stack.git
 cd docker-mediawiki-stack
 git checkout REL1_28
 git submodule update --init --remote --merge
-sudo ./runfirst.bash && \
-docker-compose up [-d] [--force-recreate]
+sudo ./runfirst.sh && docker-compose up -d
 ```
 
 You're now running the world’s largest enterprise wiki platform.
@@ -27,7 +26,7 @@ http://binaryoasis.com:8000
 
 
 ### Known Issues and Todos:
-* Architecturally the platform should be sound. There’s basic tests for most of the jenkins jobs, but the whole thing has not undergone extensive testing yet.   
+* Architecturally the platform should be sound. There’s basic tests for most of the jenkins jobs, but the whole thing has not undergone extensive testing yet.
 * Programmatically things need to be tightened and cleaned.
 * Every once in awhile the database will not give remote permissions to all containers. I think this has to do with at time initialization of mariadb and whether or not name resolution has been completed within docker. I think I resolved this.
 
@@ -88,12 +87,12 @@ host:8080
 
 Caveat Emptor
 =======================
-Per the usual, this is an open source project maintained by some random guy on the internet. Use at your own risk.  
+Per the usual, this is an open source project maintained by some random guy on the internet. Use at your own risk.
 
 
 Requirements
 ------------
-Docker && Docker Compose (runfirst.bash will handle this)
+Docker && Docker Compose (runfirst.sh will handle this)
 
 
 Contributing
