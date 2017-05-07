@@ -12,7 +12,7 @@ I recommend running the runfirst.sh. It does work for you with setting visual ed
 
 
 ```
-git clone https://github.com/rlewkowicz/docker-mediawiki-stack.git
+git clone https://github.com/versable/docker-mediawiki-stack.git
 cd docker-mediawiki-stack
 git checkout REL1_28
 git submodule update --init --remote --merge
